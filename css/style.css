@@ -54,6 +54,18 @@ section {
   color: #fff;
 }
 
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 4rem;
+  text-transform: capitalize;
+  color: #334;
+}
+
+.heading span {
+  color: #2597f4;
+}
+
 .header .contact-info {
   padding: 2rem 10%;
   display: -webkit-box;
@@ -149,8 +161,8 @@ section {
 
 .home .image {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40rem;
-          flex: 1 1 40rem;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
 }
 
 .home .image img {
@@ -159,8 +171,8 @@ section {
 
 .home .content {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 40rem;
-          flex: 1 1 40rem;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
 }
 
 .home .content h3 {
@@ -211,6 +223,99 @@ section {
   line-height: 2;
   color: #777;
   padding-top: 0.5rem;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  gap: 3rem;
+}
+
+.about .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+}
+
+.about .image img {
+  width: 100%;
+}
+
+.about .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+}
+
+.about .content h3 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #334;
+  padding-bottom: 0.5rem;
+}
+
+.about .content p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+  padding: 1rem 0;
+}
+
+.services {
+  background: #f5f5f5;
+}
+
+.services .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.services .box-container .box {
+  text-align: center;
+  background: #fff;
+  border: 0.2rem solid #334;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
+}
+
+.services .box-container .box:hover {
+  background: #334;
+}
+
+.services .box-container .box:hover h3 {
+  color: #fff;
+}
+
+.services .box-container .box:hover p {
+  color: #fff;
+}
+
+.services .box-container .box img {
+  height: 7rem;
+  margin-bottom: 0.5rem;
+}
+
+.services .box-container .box h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #334;
+  padding: 1rem 0;
+}
+
+.services .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
 }
 
 @media (max-width: 1200px) {
