@@ -334,6 +334,60 @@ section {
   }
 }
 
+.team {
+  .box-container {
+    @include grid(25rem);
+    align-items: flex-start;
+
+    .box {
+      overflow: hidden;
+      text-align: center;
+
+      &:hover {
+        .content {
+          margin-bottom: 0;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .content {
+        padding: 2rem;
+        margin-bottom: -7rem;
+
+        h3 {
+          @include titleText(2rem);
+        }
+
+        p {
+          @include graphText(1.4rem);
+          padding: 0.5rem 0;
+        }
+
+        .share {
+          margin-top: 1rem;
+
+          a {
+            height: 4.5rem;
+            width: 4.5rem;
+            line-height: 4.5rem;
+            font-size: 1.7rem;
+            margin: 0 0.3rem;
+            background: $black;
+            color: $white;
+
+            &:hover {
+              background-color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // media queries
 @media (max-width: 1200px) {
   .header {

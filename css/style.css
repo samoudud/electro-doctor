@@ -390,6 +390,66 @@ section {
   color: #777;
 }
 
+.team .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.team .box-container .box {
+  overflow: hidden;
+  text-align: center;
+}
+
+.team .box-container .box:hover .content {
+  margin-bottom: 0;
+}
+
+.team .box-container .box img {
+  width: 100%;
+}
+
+.team .box-container .box .content {
+  padding: 2rem;
+  margin-bottom: -7rem;
+}
+
+.team .box-container .box .content h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #334;
+}
+
+.team .box-container .box .content p {
+  font-size: 1.4rem;
+  line-height: 2;
+  color: #777;
+  padding: 0.5rem 0;
+}
+
+.team .box-container .box .content .share {
+  margin-top: 1rem;
+}
+
+.team .box-container .box .content .share a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+  margin: 0 0.3rem;
+  background: #334;
+  color: #fff;
+}
+
+.team .box-container .box .content .share a:hover {
+  background-color: #2597f4;
+}
+
 @media (max-width: 1200px) {
   .header .contact-info {
     padding: 2rem 5%;
