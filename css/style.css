@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #2597f4;
+  border-radius: 5rem;
+}
+
+.header .contact-info {
+  padding: 2rem 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #2597f4;
+}
+
+.header .contact-info p {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.header .contact-info p i {
+  padding-right: 0.5rem;
+  color: yellow;
+}
+
+.header .navbar {
+  padding: 2rem 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+  border-bottom: 0.2rem solid #334;
+  position: relative;
+  z-index: 1000;
+}
+
+.header .navbar .logo {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: #334;
+  font-weight: bolder;
+}
+
+.header .navbar .logo i {
+  color: #2597f4;
+}
+
+.header .navbar .links a {
+  margin-left: 2rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #334;
+}
+
+.header .navbar .links a:hover {
+  text-decoration: underline;
+  color: #2597f4;
+}
+
+.header .navbar #menu-btn {
+  font-size: 3rem;
+  cursor: pointer;
+  color: #334;
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .header .contact-info {
+    padding: 2rem 5%;
+  }
+  .header .navbar {
+    padding: 2rem 5%;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header .contact-info {
+    padding: 2rem;
+  }
+  .header .navbar {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .navbar .links {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 0.2rem solid #334;
+    border-bottom: 0.2rem solid #334;
+  }
+  .header .navbar .links a {
+    display: block;
+    margin: 2.5rem 2rem;
+    font-size: 2.5rem;
+  }
+  .header .navbar #menu-btn {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
