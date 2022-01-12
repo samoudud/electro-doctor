@@ -21,7 +21,7 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 
 @mixin grid($val) {
   display: grid;
-  grid-template-columns: repeat(auto-fit, min-max($val, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
   gap: 2rem;
 }
 
@@ -56,6 +56,26 @@ html {
   }
 }
 
+section {
+  padding: 5rem 10%;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  background: white;
+  @include titleText(1.7rem);
+  border: $border;
+
+  &:hover {
+    background: $blue;
+    background-color: $blue;
+    color: $white;
+  }
+}
+
 .header {
   .contact-info {
     padding: 2rem 10%;
@@ -84,6 +104,15 @@ html {
     border-bottom: $border;
     position: relative;
     z-index: 1000;
+
+    &.active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      border-bottom: none;
+      box-shadow: $box-shadow;
+    }
 
     .logo {
       @include titleText(2.5rem);
@@ -115,6 +144,57 @@ html {
   }
 }
 
+.home {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+
+  .image {
+    flex: 1 1 40rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .content {
+    flex: 1 1 40rem;
+
+    h3 {
+      @include titleText(4.5rem);
+    }
+    p {
+      @include graphText(1.5rem);
+      padding: 1rem 0;
+    }
+  }
+}
+
+.fun-fact {
+  @include grid(25rem);
+  background: $light-bg;
+  gap: 3.5rem;
+
+  .box {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    img {
+      height: 10rem;
+    }
+
+    h3 {
+      @include titleText(3rem);
+    }
+
+    p {
+      @include graphText(1.5rem);
+      padding-top: 0.5rem;
+    }
+  }
+}
 // media queries
 @media (max-width: 1200px) {
   .header {
@@ -125,6 +205,9 @@ html {
     .navbar {
       padding: 2rem 5%;
     }
+  }
+  section {
+    padding: 3rem 5%;
   }
 }
 
@@ -142,10 +225,19 @@ html {
       padding: 2rem;
     }
   }
+  section {
+    padding: 5rem 3rem;
+  }
+}
+body {
+  height: 200rem;
 }
 
 @media (max-width: 768px) {
   .header {
+    .contact-info {
+      display: none;
+    }
     .navbar {
       .links {
         position: absolute;
@@ -155,6 +247,11 @@ html {
         background: $white;
         border-top: $border;
         border-bottom: $border;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+        &.active {
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
 
         a {
           display: block;
@@ -164,7 +261,19 @@ html {
       }
       #menu-btn {
         display: inline-block;
+
+        &.fa-times {
+          transform: rotate(180deg);
+        }
       }
+    }
+  }
+
+  .fun-fact {
+    padding: 5rem 2 rem;
+    .box {
+      flex-flow: column;
+      text-align: center;
     }
   }
 }
@@ -172,5 +281,9 @@ html {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  .home .content h3 {
+    font-size: 3rem;
   }
 }
