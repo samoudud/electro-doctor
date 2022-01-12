@@ -196,7 +196,7 @@ section {
     }
 
     h3 {
-      @include titleText(3rem);
+      @include titleText(4rem);
     }
 
     p {
@@ -269,6 +269,27 @@ section {
       }
       p {
         @include graphText(1.5rem);
+      }
+    }
+  }
+}
+
+.gallery {
+  .gallery-container {
+    @include grid(30rem);
+
+    .box {
+      height: 25rem;
+      overflow: hidden;
+
+      &:hover img {
+        transform: scale(1.1);
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
       }
     }
   }

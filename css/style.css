@@ -213,7 +213,7 @@ section {
 }
 
 .fun-fact .box h3 {
-  font-size: 3rem;
+  font-size: 4rem;
   text-transform: capitalize;
   color: #334;
 }
@@ -316,6 +316,31 @@ section {
   font-size: 1.5rem;
   line-height: 2;
   color: #777;
+}
+
+.gallery .gallery-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.gallery .gallery-container .box {
+  height: 25rem;
+  overflow: hidden;
+}
+
+.gallery .gallery-container .box:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.gallery .gallery-container .box img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (max-width: 1200px) {
