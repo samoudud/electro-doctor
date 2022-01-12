@@ -32,7 +32,8 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5rem;
 }
 
-section {
+main,
+footer {
   padding: 5rem 10%;
 }
 
@@ -450,6 +451,247 @@ section {
   background-color: #2597f4;
 }
 
+.reviews {
+  background: #f5f5f5;
+}
+
+.reviews .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.reviews .box-container .box {
+  text-align: center;
+  padding: 3rem;
+  background: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: 0.2rem solid #334;
+}
+
+.reviews .box-container .box:hover {
+  background-color: #334;
+}
+
+.reviews .box-container .box:hover .text p {
+  color: #fff;
+}
+
+.reviews .box-container .box:hover .user h3 {
+  color: #fff;
+}
+
+.reviews .box-container .box .star {
+  color: #2597f4;
+  font-size: 1.7rem;
+}
+
+.reviews .box-container .box .text {
+  position: relative;
+  z-index: 0;
+  padding: 1.5rem 0;
+}
+
+.reviews .box-container .box .text i {
+  font-size: 7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.3;
+  color: #2597f4;
+}
+
+.reviews .box-container .box .text p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+}
+
+.reviews .box-container .box .user img {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.reviews .box-container .box .user h3 {
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  color: #334;
+}
+
+.contact .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.contact .row .map {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+  width: 100%;
+}
+
+.contact .row form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 4rem;
+          flex: 1 1 4rem;
+  padding: 2rem;
+  border: 0.2rem solid #334;
+}
+
+.contact .row form h3 {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  color: #334;
+  padding-bottom: 1rem;
+}
+
+.contact .row form .input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: warp;
+      flex-wrap: warp;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact .row form .input-box input {
+  width: 49%;
+}
+
+.contact .row form .input-box input,
+.contact .row form textarea {
+  padding: 1.2rem 1.4rem;
+  font-size: 1.6rem;
+  color: #777;
+  margin: 0.7rem 0;
+  border: 0.2rem solid #334;
+}
+
+.contact .row form .input-box input:focus,
+.contact .row form textarea:focus {
+  background: #334;
+  color: #fff;
+}
+
+.contact .row form .input-box input:focus::-webkit-input-placeholder,
+.contact .row form textarea:focus::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.contact .row form .input-box input:focus:-ms-input-placeholder,
+.contact .row form textarea:focus:-ms-input-placeholder {
+  color: #fff;
+}
+
+.contact .row form .input-box input:focus::-ms-input-placeholder,
+.contact .row form textarea:focus::-ms-input-placeholder {
+  color: #fff;
+}
+
+.contact .row form .input-box input:focus::placeholder,
+.contact .row form textarea:focus::placeholder {
+  color: #fff;
+}
+
+.contact .row form textarea {
+  width: 100%;
+  height: 15rem;
+  resize: none;
+}
+
+.footer {
+  background: #f5f5f5;
+}
+
+.footer .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  color: #334;
+  padding: 1rem 0;
+}
+
+.footer .box-container .box .link {
+  display: block;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+}
+
+.footer .box-container .box .link i {
+  padding-right: 0.5rem;
+  color: #2597f4;
+}
+
+.footer .box-container .box .link:hover {
+  color: #2597f4;
+}
+
+.footer .box-container .box .link:hover i {
+  padding-right: 2rem;
+}
+
+.footer .box-container .box p {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #777;
+}
+
+.footer .box-container .box p span {
+  color: #2597f4;
+}
+
+.footer .box-container .box .email {
+  width: 100%;
+  border: 0.2rem solid #334;
+  padding: 1.6rem 1.4rem;
+  font-size: 1.6rem;
+  color: #777;
+  margin: 1rem 0;
+}
+
+.footer .box-container .box .share {
+  margin-top: 1rem;
+}
+
+.footer .box-container .box .share a {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 1.7rem;
+  background: #334;
+  color: #fff;
+  margin-right: 0.3rem;
+  text-align: center;
+}
+
+.footer .box-container .box .share a:hove {
+  background: #2597f4;
+}
+
 @media (max-width: 1200px) {
   .header .contact-info {
     padding: 2rem 5%;
@@ -530,6 +772,9 @@ body {
   }
   .home .content h3 {
     font-size: 3rem;
+  }
+  .contact .row form .input-box input {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -56,7 +56,8 @@ html {
   }
 }
 
-section {
+main,
+footer {
   padding: 5rem 10%;
 }
 
@@ -388,6 +389,198 @@ section {
   }
 }
 
+.reviews {
+  background: $light-bg;
+
+  .box-container {
+    @include grid(30rem);
+
+    .box {
+      text-align: center;
+      padding: 3rem;
+      background: $white;
+      box-shadow: $box-shadow;
+      border: $border;
+
+      &:hover {
+        background-color: $black;
+
+        .text p {
+          color: $white;
+        }
+
+        .user h3 {
+          color: $white;
+        }
+      }
+
+      .star {
+        color: $blue;
+        font-size: 1.7rem;
+      }
+
+      .text {
+        position: relative;
+        z-index: 0;
+        padding: 1.5rem 0;
+
+        i {
+          font-size: 7rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          opacity: 0.3;
+          color: $blue;
+        }
+
+        p {
+          @include graphText(1.5rem);
+        }
+      }
+
+      .user {
+        img {
+          height: 7rem;
+          width: 7rem;
+          border-radius: 50%;
+          margin-bottom: 0.5rem;
+        }
+
+        h3 {
+          @include titleText(1.7rem);
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    .map {
+      flex: 1 1 42rem;
+      width: 100%;
+    }
+
+    form {
+      flex: 1 1 4rem;
+      padding: 2rem;
+      border: $border;
+
+      h3 {
+        @include titleText(2.5rem);
+        padding-bottom: 1rem;
+      }
+
+      .input-box {
+        display: flex;
+        flex-wrap: warp;
+        justify-content: space-between;
+
+        input {
+          width: 49%;
+        }
+      }
+      .input-box input,
+      textarea {
+        padding: 1.2rem 1.4rem;
+        font-size: 1.6rem;
+        color: $light-color;
+        margin: 0.7rem 0;
+        border: $border;
+
+        &:focus {
+          background: $black;
+          color: $white;
+
+          &::placeholder {
+            color: $white;
+          }
+        }
+      }
+
+      textarea {
+        width: 100%;
+        height: 15rem;
+        resize: none;
+      }
+    }
+  }
+}
+
+.footer {
+  background: $light-bg;
+
+  .box-container {
+    @include grid(30rem);
+
+    .box {
+      h3 {
+        @include titleText(2.2rem);
+        padding: 1rem 0;
+      }
+
+      .link {
+        display: block;
+        padding: 0.5rem 0;
+        @include graphText(1.5rem);
+
+        i {
+          padding-right: 0.5rem;
+          color: $blue;
+        }
+
+        &:hover {
+          color: $blue;
+          i {
+            padding-right: 2rem;
+          }
+        }
+      }
+      p {
+        padding: 0.5rem 0;
+        @include graphText(1.5rem);
+        span {
+          color: $blue;
+        }
+      }
+
+      .email {
+        width: 100%;
+        border: $border;
+        padding: 1.6rem 1.4rem;
+        font-size: 1.6rem;
+        color: $light-color;
+        margin: 1rem 0;
+      }
+
+      .share {
+        margin-top: 1rem;
+
+        a {
+          height: 4.5rem;
+          width: 4.5rem;
+          line-height: 4.5rem;
+          font-size: 1.7rem;
+          background: $black;
+          color: $white;
+          margin-right: 0.3rem;
+          text-align: center;
+
+          &:hove {
+            background: $blue;
+          }
+        }
+      }
+    }
+  }
+}
+
 // media queries
 @media (max-width: 1200px) {
   .header {
@@ -478,5 +671,9 @@ body {
 
   .home .content h3 {
     font-size: 3rem;
+  }
+
+  .contact .row form .input-box input {
+    width: 100%;
   }
 }
